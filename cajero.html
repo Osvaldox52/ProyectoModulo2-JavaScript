@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./cajero.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Cajero Automático con NIP</title>
+</head>
+<body>
+  <div class="container">
+    <div class="LOGO">
+      <img src="./LOGOBAN.png" alt="Logo del banco.">
+    </div>
+    <div class="NombreBanco">
+      <h1>Tay Bank.</h1>
+    </div>
+    <button type="button" class="btn btn-outline-dark" id="Ingresob" onclick="mostrarPantalla2()">Ingresar.</button>
+    <main class="Pantalla2" id="pantalla2">
+      <label for="cuentas" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 20px;">Selecciona una cuenta:</label>
+      <select id="cuentas" onchange="seleccionarCuenta()">
+        <option value="Mali">Mali</option>
+        <option value="Gera">Gera</option>
+        <option value="Maui">Maui</option>
+      </select>
+      <div class="ingresoNIP">
+        <label for="nip" id="ingresaNIP">Ingresa tu NIP:</label>
+        <input type="password" id="nip" placeholder="NIP">
+      </div>
+      <div id="saldo"></div>
+      <label for="cantidad" id="icantidad">Ingresa la cantidad:</label>
+      <input type="number" id="cantidad" min="1" placeholder="Cantidad">
+      <div class="btn-group" role="group" aria-label="Basic outlined example" id="botones">
+        <button type="button" class="btn btn-outline-primary" id="botonrd" onclick="autenticarYRetirar()">Retirar.</button>
+        <button type="button" class="btn btn-outline-primary" id="botonrd" onclick="autenticarYDepositar()">Depositar.</button>
+      </div>
+    </main>
+  </div>
+<script src="./cajero.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
